@@ -5,3 +5,4 @@ golomb = Golomb("meuFile.php")
 generico = Codec("meuOutroFile.png")
 
 generico.encode()
+lerArquivo("meucaminha.exe")

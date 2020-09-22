@@ -1,8 +1,5 @@
-from utils import *
 from Golomb import *
+from utils import *
 
-golomb = Golomb("meuFile.php")
-generico = Codec("meuOutroFile.png")
-
-generico.encode()
-lerArquivo("meucaminha.exe")
+coder = Golomb("arquivos/teste.txt", 4)
+coder.encode().write_encoded()

@@ -1,4 +1,9 @@
 import binascii
+from Golomb import *
+from EliasGama import *
+from Delta import *
+from Unaria import *
+from Fibonacci import *
 
 def file_to_int(caminho):
     
@@ -16,6 +21,21 @@ def file_to_int(caminho):
 
     return saida
 
+def file_to_bin(caminho):
+    saida = ""
+    arquivo = open(caminho,"r")
+    
+    for linha in arquivo:
+        for caracter in linha:
+            binario = str_to_bin(caracter)
+            saida += str(binario) + " "
+
+    arquivo.close()
+    saida = saida[:-1]
+
+    return saida
+
+
 def str_to_bin(string):
     binario = ''
     for i in string:
@@ -23,6 +43,7 @@ def str_to_bin(string):
     return binario
 
 def bin_to_str(binario):
+
     binario = str(binario)
     caractere = ''
     string = ''
@@ -40,6 +61,7 @@ def bin_to_str(binario):
     return string
 
 def bin_to_int(n):
+
     decimal = 0
     n = str(n)
     n = n[::-1]
